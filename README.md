@@ -1,7 +1,7 @@
 # Hotel_application
 
 ## Endpoints
-Persons
+### Persons
 - Add a Person:
 
    - Endpoint: POST /person
@@ -22,7 +22,8 @@ Persons
 
     - Endpoint: DELETE /person/:id
     - Description: Deletes a person from the system based on their ID.
-Menu Items
+### Menu Items
+
 - Add a Menu Item:
 
     - Endpoint: POST /menu
@@ -43,3 +44,56 @@ Menu Items
 
     - Endpoint: DELETE /menu/:id
     - Description: Deletes a menu item from the system based on its ID.
+
+## Data Models
+### Person
+The Person data model represents information about staff members in the hotel.
+
+### Fields:
+<pre>
+    - name: String (Person's name)
+    - age: Number (Person's age)
+    - work: Enum (Role in the hotel, such as chef, waiter, manager)
+    - mobile: String (Person's mobile number)
+    - email: String (Person's email address, unique)
+    - address: String (Person's address)
+    - salary: Number (Person's salary)
+    </pre>
+Example:
+<pre>
+{
+  "name": "John Doe",
+  "age": 30,
+  "work": "waiter",
+  "mobile": "123-456-7890",
+  "email": "john@example.com",
+  "address": "123 Main Street",
+  "salary": 30000
+}
+</pre>
+### Menu Item
+The MenuItem data model represents information about menu items available in the hotel.
+
+### Fields:
+<pre>
+    - name: String (Item's name)
+    - price: Number (Item's price)
+    - taste: Enum (Item's taste, such as >sweet, spicy, sour)
+    - is_drink: Boolean (Indicates if the item is a drink, default is false)
+    - ingredients: Array of Strings (List of ingredients, default is an empty array)
+    - num_sales: Number (Number of sales for the item, default is 0)
+    </pre>
+Example:
+<pre>
+{
+  "name": "Spicy Chicken Curry",
+  "price": 12.99,
+  "taste": "spicy",
+  "is_drink": false,
+  "ingredients": ["chicken", "spices", "vegetables"],
+  "num_sales": 50
+}
+</pre>
+## Usage
+### Install Dependencies:
+npm install

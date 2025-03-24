@@ -7,18 +7,19 @@ router.post('/menu', (req,res)=>{
 })
 
 // get all menu items
-router.get('/menu', (req,res)=>{
+router.get('/', (req,res)=>{
 
 })
 // get menu items by taste
-router.get('/menu/:test', (req,res)=>{
+router.get('/:test', (req,res)=>{
 
 })
 // update a menu item
-router.put('/menu/:id', (req,res)=>{
+router.put('/:id', (req,res)=>{
 
 })
 // delete a menu item
-router.delete('/menu/:id', (req,res)=>{
+router.delete('/:id', (req,res)=>{
 
 })
+module.exports = router
